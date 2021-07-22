@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>地址识别</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron" style="background-image: url(../static/image/backg.jfif);">
+				<h2 style="color:white">
+					地址识别
+				</h2>
+				<p style="color:white">
+					精准提取快递填单文本中的地址信息，通过自然语言处理辅助地址识别做自动补充和纠正，生成标准规范的结构化信息，大幅提升企业效率
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+			<h3 class="text-center">
+				功能演示
+			</h3>
+			<form role="form" method="post">
+				<div class="form-group">
+					 
+					<label>
+						Address
+					</label>
+					<input type="text" class="form-control" name="addrStr" placeholder="请输入要识别的地址">
+				</div>
+                <div style="text-align: center;" >
+				    <button type="submit" class="btn btn-primary" name="butAddr">
+					    开始分析
+				    </button>
+                </div>
+			</form>
+            <div class="demo-result-title" style="color:#000;font-size:18px;margin-bottom:20px">分析结果:</div>
+                    <div class="demo-result" style="position:relative;min-height:226px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #eee;padding:24px 30px;overflow:hidden">
+                        <div class="demo-result-body">
+                            <div class="demo-result-body-left">
+                                <div class="result-title">
+                                    <strong>地址</strong>
+                                </div> <div class="result-info" style="line-height: 30px; font-size:14px">
+                                <span class="result-info-name" style="float: left;width: 60px;color:#666;">省</span>
+                                <span class="result-info-value">{{ provinceName }}</span>
+                            </div>
+                                <div class="result-info" style="line-height: 30px; font-size:14px">
+                                    <span class="result-info-name" style="float: left;width: 60px;color:#666;">市</span>
+                                    <span class="result-info-value">{{ cityName }}</span>
+                                </div>
+                                <div class="result-info" style="line-height: 30px; font-size:14px">
+                                    <span class="result-info-name" style="float: left;width: 60px;color:#666;">区</span>
+                                    <span class="result-info-value">{{ areaName }}</span>
+                                </div>
+                                <div class="result-info" style="line-height: 30px; font-size:14px">
+                                    <span class="result-info-name" style="float: left;width: 60px;color:#666;">街道</span>
+                                    <span class="result-info-value">{{ countyName }}</span>
+                                </div>
+                                <div class="result-info" style="line-height: 30px; font-size:14px">
+                                    <span class="result-info-name" style="float: left;width: 60px;color:#666;">详细地址</span>
+                                    <span class="result-info-value">{{ otherName }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+</div>
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/scripts.js"></script>
+  </body>
+</html>
